@@ -176,17 +176,17 @@ window.addEventListener("mousemove", function (event) {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  const menuItems = document.querySelectorAll('[data-nav-toggler]');
-  const menu = document.querySelector('[data-menu]'); // Adjust this selector based on your actual menu structure
+// document.addEventListener('DOMContentLoaded', function() {
+//   const menuItems = document.querySelectorAll('[data-nav-toggler]');
+//   const menu = document.querySelector('[data-menu]'); // Adjust this selector based on your actual menu structure
 
-  function closeMenu() {
-      // Your logic to close the menu goes here
-      menu.classList.remove('active'); // Remove the 'active' class or apply your own logic
-  }
+//   function closeMenu() {
+//       // Your logic to close the menu goes here
+//       menu.classList.remove('active'); // Remove the 'active' class or apply your own logic
+//   }
 
-  // Attach the event listener to each menu item
-  menuItems.forEach(function(item) {
-      item.addEventListener('click', closeMenu);
-  });
-});
+//   // Attach the event listener to each menu item
+//   menuItems.forEach(function(item) {
+//       item.addEventListener('click', closeMenu);
+//   });
+// });
