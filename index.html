@@ -122,7 +122,7 @@
 
       <nav class="navbar" data-navbar>
 
-        <button class="close-btn" aria-label="close menu" data-nav-toggler>
+        <button class="close-btn" aria-label="close menu" data-nav-toggler12>
           <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </button>
 
@@ -133,14 +133,15 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <a href="#home" class="navbar-link hover-underline active">
+            <a href="#home" class="navbar-link hover-underline active" onclick="toggleNavbar1()">
+              
               <div class="separator"></div>
-
               <span class="span">Home</span>
             </a>
           </li>
+          
           <li class="navbar-item">
-            <a href="#menu" class="navbar-link hover-underline">
+            <a href="#menu" class="navbar-link hover-underline"onclick="toggleNavbar1()">
               <div class="separator"></div>
 
               <span class="span">Menus</span>
@@ -148,7 +149,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link hover-underline">
+            <a href="#" class="navbar-link hover-underline"onclick="toggleNavbar1()">
               <div class="separator"></div>
 
               <span class="span">Order Online </span>
@@ -156,7 +157,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#about" class="navbar-link hover-underline">
+            <a href="#about" class="navbar-link hover-underline"onclick="toggleNavbar1()">
               <div class="separator"></div>
 
               <span class="span">Catering</span>
@@ -166,7 +167,7 @@
        
 
           <li class="navbar-item">
-            <a href="#contactus" class="navbar-link hover-underline">
+            <a href="#contactus" class="navbar-link hover-underline"onclick="toggleNavbar1()">
               <div class="separator"></div>
 
               <span class="span">Contact</span>
@@ -203,13 +204,13 @@
         <span class="text text-2" aria-hidden="true">Find A Table</span>
       </a>
 
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler href="#home">
         <span class="line line-1"></span>
         <span class="line line-2"></span>
         <span class="line line-3"></span>
       </button>
 
-      <div class="overlay" data-nav-toggler data-overlay></div>
+      <div class="overlay" data-nav-toggler12 data-overlay></div>
 
     </div>
   </header>
@@ -332,6 +333,11 @@
 
       <section class="section service bg-black-10 text-center" aria-label="service">
         <!-- <div class="container"> -->
+        <img src="./assets/images/shape2.png"  class="  shape shape-2"   alt="" 
+        style="width: 200px; height: auto; margin: 0; padding: 0; border: none;
+         position: absolute; top : 2%; left: 2%; z-index: -1;
+         transform: rotate(130deg); "
+        >
 
           <p class="section-subtitle label-2">Special Food</p>
 
@@ -415,8 +421,12 @@
           </ul>
 
           <img src="./assets/images/shape-1.png" width="246" height="412" loading="lazy" alt="shape"
+          style=" bottom: 0; left: 0; z-index: -2; margin: 2%;"
+
             class="shape shape-1 move-anim">
           <img src="./assets/images/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
+          style=" top: 0; right: 0; z-index: -2; margin: 2%;"
+
             class="shape shape-2 move-anim">
 
         </div>
@@ -427,7 +437,9 @@
 
    
       <section class="section menu" aria-label="menu-label" id="menu">
-      <!-- <img src="./assets/images/shape-9.png" width="351" height="462" loading="lazy" alt=""  style="position: relative; top: -300px; right: 0; z-index: 2;"> -->
+      <img src="./assets/images/shape-9.png" width="200" height=auto loading="lazy" alt="" 
+       style="position: absolute; top: -100px; right: 0; z-index: -1; margin: 2%;"
+       >
         
         <div class="container">
 
@@ -610,9 +622,9 @@
 
           </ul>
 
-          <p class="menu-text text-center">
+          <!-- <p class="menu-text text-center">
             During winter daily from <span class="span">7:00 pm</span> to <span class="span">9:00 pm</span>
-          </p>
+          </p> -->
 
           <a href="#" class="btn btn-primary">
             <span class="text text-1">View All Menu</span>
@@ -621,6 +633,7 @@
           </a>
 
           <img src="./assets/images/shape-5.png" width="921" height="1036" loading="lazy" alt="shape"
+          style="z-index: -3;"
             class="shape shape-2 move-anim">
           <img src="./assets/images/shape-6.png" width="343" height="345" loading="lazy" alt="shape"
             class="shape shape-3 move-anim">
@@ -631,253 +644,7 @@
 
 
 
-
-      <!-- 
-        - #TESTIMONIALS
-      -->
-<!-- 
-      <section class="section testi text-center has-bg-image"
-        style="background-image: url('./assets/images/testimonial-bg.jpg')" aria-label="testimonials">
-        <div class="container">
-
-          <div class="quote">”</div>
-
-          <p class="headline-2 testi-text">
-            I wanted to thank you for inviting me down for that amazing dinner the other night. The food was
-            extraordinary.
-          </p>
-
-          <div class="wrapper">
-            <div class="separator"></div>
-            <div class="separator"></div>
-            <div class="separator"></div>
-          </div>
-
-          <div class="profile">
-            <img src="./assets/images/testi-avatar.jpg" width="100" height="100" loading="lazy" alt="Sam Jhonson"
-              class="img">
-
-            <p class="label-2 profile-name">Sam Jhonson</p>
-          </div>
-
-        </div>
-      </section> -->
-
-
-
-
-
-      <!-- 
-        - #RESERVATION
-      -->
-<!-- 
-      <section class="reservation">
-        <div class="container">
-
-          <div class="form reservation-form bg-black-10">
-
-            <form action="" class="form-left">
-
-              <h2 class="headline-1 text-center">Online Reservation</h2>
-
-              <p class="form-text text-center">
-                Booking request <a href="tel:+88123123456" class="link">+88-123-123456</a>
-                or fill out the order form
-              </p>
-
-              <div class="input-wrapper">
-                <input type="text" name="name" placeholder="Your Name" autocomplete="off" class="input-field">
-
-                <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field">
-              </div>
-
-              <div class="input-wrapper">
-
-                <div class="icon-wrapper">
-                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-
-                  <select name="person" class="input-field">
-                    <option value="1-person">1 Person</option>
-                    <option value="2-person">2 Person</option>
-                    <option value="3-person">3 Person</option>
-                    <option value="4-person">4 Person</option>
-                    <option value="5-person">5 Person</option>
-                    <option value="6-person">6 Person</option>
-                    <option value="7-person">7 Person</option>
-                  </select>
-
-                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                </div>
-
-                <div class="icon-wrapper">
-                  <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
-
-                  <input type="date" name="reservation-date" class="input-field">
-
-                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                </div>
-
-                <div class="icon-wrapper">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <select name="person" class="input-field">
-                    <option value="08:00am">08 : 00 am</option>
-                    <option value="09:00am">09 : 00 am</option>
-                    <option value="010:00am">10 : 00 am</option>
-                    <option value="011:00am">11 : 00 am</option>
-                    <option value="012:00am">12 : 00 am</option>
-                    <option value="01:00pm">01 : 00 pm</option>
-                    <option value="02:00pm">02 : 00 pm</option>
-                    <option value="03:00pm">03 : 00 pm</option>
-                    <option value="04:00pm">04 : 00 pm</option>
-                    <option value="05:00pm">05 : 00 pm</option>
-                    <option value="06:00pm">06 : 00 pm</option>
-                    <option value="07:00pm">07 : 00 pm</option>
-                    <option value="08:00pm">08 : 00 pm</option>
-                    <option value="09:00pm">09 : 00 pm</option>
-                    <option value="10:00pm">10 : 00 pm</option>
-                  </select>
-
-                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                </div>
-
-              </div>
-
-              <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
-
-              <button type="submit" class="btn btn-secondary">
-                <span class="text text-1">Book A Table</span>
-
-                <span class="text text-2" aria-hidden="true">Book A Table</span>
-              </button>
-
-            </form>
-
-            <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
-
-              <h2 class="headline-1 text-center">Contact Us</h2>
-
-              <p class="contact-label">Booking Request</p>
-
-              <a href="tel:+88123123456" class="body-1 contact-number hover-underline">+88-123-123456</a>
-
-              <div class="separator"></div>
-
-              <p class="contact-label">Location</p>
-
-              <address class="body-4">
-                Restaurant St, Delicious City, <br>
-                London 9578, UK
-              </address>
-
-              <p class="contact-label">Lunch Time</p>
-
-              <p class="body-4">
-                Monday to Sunday <br>
-                11.00 am - 2.30pm
-              </p>
-
-              <p class="contact-label">Dinner Time</p>
-
-              <p class="body-4">
-                Monday to Sunday <br>
-                05.00 pm - 10.00pm
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
- -->
-
-
-      <!-- 
-        - #FEATURES
-      -->
-<!-- 
-      <section class="section features text-center" aria-label="features">
-        <div class="container">
-
-          <p class="section-subtitle label-2">Why Choose Us</p>
-
-          <h2 class="headline-1 section-title">Our Strength</h2>
-
-          <ul class="grid-list">
-
-            <li class="feature-item">
-              <div class="feature-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
-                </div>
-
-                <h3 class="title-2 card-title">Hygienic Food</h3>
-
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
-
-              </div>
-            </li>
-
-            <li class="feature-item">
-              <div class="feature-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/features-icon-2.png" width="100" height="80" loading="lazy" alt="icon">
-                </div>
-
-                <h3 class="title-2 card-title">Fresh Environment</h3>
-
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
-
-              </div>
-            </li>
-
-            <li class="feature-item">
-              <div class="feature-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/features-icon-3.png" width="100" height="80" loading="lazy" alt="icon">
-                </div>
-
-                <h3 class="title-2 card-title">Skilled Chefs</h3>
-
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
-
-              </div>
-            </li>
-
-            <li class="feature-item">
-              <div class="feature-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/features-icon-4.png" width="100" height="80" loading="lazy" alt="icon">
-                </div>
-
-                <h3 class="title-2 card-title">Event & Party</h3>
-
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
-
-              </div>
-            </li>
-
-          </ul>
-
-          <img src="./assets/images/shape-7.png" width="208" height="178" loading="lazy" alt="shape"
-            class="shape shape-1">
-
-          <img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="shape"
-            class="shape shape-2">
-
-        </div>
-      </section>
-
-
- -->
-
+ 
 
       <!-- 
         - #EVENT
@@ -891,7 +658,7 @@
 
           <h2 class="section-title headline-1 text-center">Gallery</h2>
           <img src="./assets/images/shape-7.png" width="208" height="178" loading="lazy" alt="shape" 
-          class="features shape shape-1" style="  position: absolute;  top: 5px;  right: 0;" >
+          class="features shape shape-1" style="  position: absolute;  top: -75px;  right: 0;" >
     
           <ul class="grid-list">
 
@@ -1168,7 +935,8 @@
         </div>
 
         <ul class="footer-list">
-
+          <img src="./assets/images/shape-7.png" width="208" height="178" loading="lazy" alt="shape" 
+          class="features shape shape-1" style="  position: absolute;  top: -35px;  right: 0;" >
      
         </ul>
 

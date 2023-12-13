@@ -15,7 +15,7 @@ window.addEventListener("load", function () {
   setTimeout(function() {
     preloader.classList.add("loaded");
     document.body.classList.add("loaded");
-  }, 500); // 2000 milliseconds = 2 seconds
+  }, 800); // 2000 milliseconds = 2 seconds
 });
 
 
@@ -42,14 +42,24 @@ const overlay = document.querySelector("[data-overlay]");
 
 const toggleNavbar = function () {
   
-  navbar.classList.toggle("active");
-  overlay.classList.toggle("active");
-  document.body.classList.toggle("nav-active");
+  navbar.classList.add("active");
+  overlay.classList.add("active");
+  document.body.classList.add("nav-active");
+  console.log("add");
+
 }
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
+const navTogglers12 = document.querySelectorAll("[data-nav-toggler12]");
 
-
+const toggleNavbar1 = function () {
+  
+  navbar.classList.remove("active");
+  overlay.classList.remove("active");
+  document.body.classList.remove("nav-active");
+  console.log("remveo");
+}
+addEventOnElements(navTogglers12, "click", toggleNavbar1);
 
 /**
  * HEADER & BACK TOP BTN
@@ -79,6 +89,7 @@ window.addEventListener("scroll", function () {
   } else {
     header.classList.remove("active");
     backTopBtn.classList.remove("active");
+    
   }
 });
 
@@ -175,18 +186,3 @@ window.addEventListener("mousemove", function (event) {
 
 
 
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   const menuItems = document.querySelectorAll('[data-nav-toggler]');
-//   const menu = document.querySelector('[data-menu]'); // Adjust this selector based on your actual menu structure
-
-//   function closeMenu() {
-//       // Your logic to close the menu goes here
-//       menu.classList.remove('active'); // Remove the 'active' class or apply your own logic
-//   }
-
-//   // Attach the event listener to each menu item
-//   menuItems.forEach(function(item) {
-//       item.addEventListener('click', closeMenu);
-//   });
-// });

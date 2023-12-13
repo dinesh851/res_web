@@ -402,7 +402,7 @@ body.nav-active { overflow: hidden; }
 .section {
   position: relative;
   padding-block: var(--section-space);
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 1;
 }
 
@@ -1471,8 +1471,7 @@ textarea.input-field {
   }
 
   .contact-number { --fontSize-body-1: 3rem; }
-
-
+ 
 
   /**
    * TOPBAR
