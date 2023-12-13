@@ -11,8 +11,11 @@
 const preloader = document.querySelector("[data-preaload]");
 
 window.addEventListener("load", function () {
-  preloader.classList.add("loaded");
-  document.body.classList.add("loaded");
+ 
+  setTimeout(function() {
+    preloader.classList.add("loaded");
+    document.body.classList.add("loaded");
+  }, 500); // 2000 milliseconds = 2 seconds
 });
 
 
@@ -38,6 +41,7 @@ const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const overlay = document.querySelector("[data-overlay]");
 
 const toggleNavbar = function () {
+  
   navbar.classList.toggle("active");
   overlay.classList.toggle("active");
   document.body.classList.toggle("nav-active");
@@ -131,7 +135,7 @@ let autoSlideInterval;
 const autoSlide = function () {
   autoSlideInterval = setInterval(function () {
     slideNext();
-  }, 7000);
+  }, 5000);
 }
 
 addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function () {
@@ -169,17 +173,20 @@ window.addEventListener("mousemove", function (event) {
 
 }); 
 
- 
-const options = {
-  //Any element with this class will become an individual gallery
-  gallery: '.gallery-js',   
 
-  // Your slides will be every <a> tag that is children from .gallery-js
-  children: 'a',
- // This module will only load when you click to show the images, making your data bundle lighter
-// pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe.esm.min.js')
-};
-                
-const lightbox = new PhotoSwipeLightbox(options);
-        
-lightbox.init();
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuItems = document.querySelectorAll('[data-nav-toggler]');
+  const menu = document.querySelector('[data-menu]'); // Adjust this selector based on your actual menu structure
+
+  function closeMenu() {
+      // Your logic to close the menu goes here
+      menu.classList.remove('active'); // Remove the 'active' class or apply your own logic
+  }
+
+  // Attach the event listener to each menu item
+  menuItems.forEach(function(item) {
+      item.addEventListener('click', closeMenu);
+  });
+});
